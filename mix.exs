@@ -34,7 +34,6 @@ defmodule PhoenixChannelMinimal.MixProject do
     [
       {:phoenix, "~> 1.7.14"},
       {:jason, "~> 1.2"},
-      {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"}
     ]
   end

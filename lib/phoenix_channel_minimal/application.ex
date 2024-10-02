@@ -8,7 +8,6 @@ defmodule PhoenixChannelMinimal.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      {DNSCluster, query: Application.get_env(:phoenix_channel_minimal, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: PhoenixChannelMinimal.PubSub},
       # Start to serve requests, typically the last entry
       PhoenixChannelMinimalWeb.Endpoint
