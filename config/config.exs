@@ -7,12 +7,7 @@ config :phoenix_channel_minimal,
 config :phoenix_channel_minimal, PhoenixChannelMinimalWeb.Endpoint,
   url: [host: "localhost"],
   adapter: Bandit.PhoenixAdapter,
-  render_errors: [
-    formats: [html: PhoenixChannelMinimalWeb.ErrorHTML, json: PhoenixChannelMinimalWeb.ErrorJSON],
-    layout: false
-  ],
-  pubsub_server: PhoenixChannelMinimal.PubSub,
-  live_view: [signing_salt: "npI6hU5K"]
+  pubsub_server: PhoenixChannelMinimal.PubSub
 
 # Configures Elixir's Logger
 config :logger, :console,

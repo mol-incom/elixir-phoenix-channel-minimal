@@ -34,7 +34,7 @@ defmodule PhoenixChannelMinimal.MixProject do
     [
       {:phoenix, "~> 1.7.14"},
       {:jason, "~> 1.2"},
-      {:bandit, "~> 1.5"}
+      {:bandit, "~> 1.5"},
     ]
   end
 
