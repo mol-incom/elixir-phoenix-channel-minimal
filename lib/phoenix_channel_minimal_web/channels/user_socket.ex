@@ -10,7 +10,7 @@ defmodule PhoenixChannelMinimalWeb.UserSocket do
   # Uncomment the following line to define a "room:*" topic
   # pointing to the `PhoenixChannelMinimalWeb.RoomChannel`:
   #
-   channel "room:*", PhoenixChannelMinimalWeb.RoomChannel
+  channel "room:*", PhoenixChannelMinimalWeb.RoomChannel
   #
   # To create a channel file, use the mix task:
   #
