@@ -8,13 +8,8 @@ defmodule PhoenixChannelMinimal.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      PhoenixChannelMinimalWeb.Telemetry,
       {DNSCluster, query: Application.get_env(:phoenix_channel_minimal, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: PhoenixChannelMinimal.PubSub},
-      # Start the Finch HTTP client for sending emails
-      {Finch, name: PhoenixChannelMinimal.Finch},
-      # Start a worker by calling: PhoenixChannelMinimal.Worker.start_link(arg)
-      # {PhoenixChannelMinimal.Worker, arg},
       # Start to serve requests, typically the last entry
       PhoenixChannelMinimalWeb.Endpoint
     ]
