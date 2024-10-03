@@ -1,18 +1,20 @@
 # PhoenixChannelMinimal
 
-To start your Phoenix server:
+Example project consisting of a Phoenix server that implements a simple Channel.
+To test this and show its use from the client side, a small [JS application](./test-client-js) is included as well.
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+Run the following commands from the project root to setup and run Phoenix server:
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+* `mix setup`: install and setup dependencies
+* `mix phx.server` (or inside IEx with `iex -S mix phx.server`): run server application
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+The server listens on `localhost:4000`, but only for websocket connections on `/socket`.
 
-## Learn more
+Run the following commands from `./test-client-js` to setup and run Phoenix server:
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+* `npm install`: install and setup dependencies
+* `npm run dev`: run client application (port is printed in the console; configure using env var `PORT`)
+
+The client simply joins the channel `room:lobby` and prints any messages it receives above the input field.
+Text that is submitted from the input field is sent to the channel which broadcasts it back to the client.
+If multiple clients are running (remember to use different ports), they receive each other's messages as well.
