@@ -1,5 +1,5 @@
 defmodule PhoenixChannelMinimalWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :phoenix_channel_minimal
+ use Phoenix.Endpoint, otp_app: :phoenix_channel_minimal
 
   socket "/socket", PhoenixChannelMinimalWeb.UserSocket,
     websocket: true,
